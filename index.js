@@ -7,7 +7,7 @@ const fs = require('fs');
 
 const app = express();
 
-app.use(cors({credentials: true, origin: 'http://localhost:8500'}));
+app.use(cors({credentials: true, origin: 'https://cors-frontend-service.herokuapp.com'}));
 app.use(express.json());
 
 
@@ -19,7 +19,7 @@ app.listen(port, function(){
 });
 
 app.get('/api/cookie',function (req, res) {
-    res.setHeader('Set-Cookie','cdn-token=exp=3-header; domain=.heroku.com; path=/; SameSite=none; Secure;');
+    res.setHeader('Set-Cookie','cdn-token=exp=3-header; domain=.herokuapp.com; path=/; SameSite=none; Secure;');
     res.json({status:'cooked!'});
 });
 
