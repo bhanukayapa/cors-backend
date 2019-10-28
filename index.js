@@ -19,7 +19,7 @@ app.listen(port, function(){
 });
 
 app.get('/api/cookie',function (req, res) {
-    res.setHeader('Set-Cookie','cdn-token=exp=3-header; domain=.herokuapp.com; path=/; SameSite=none;');
+    res.setHeader('Set-Cookie','cdn-token=exp3header; domain=.herokuapp.com; path=/; SameSite=None;');
     res.json({status:'cooked!'});
 });
 
